@@ -8,10 +8,49 @@
     --Farba-tlacidiel: #DFE0F7;
     --Farba-nadpisov: #FBFF00;
     --Farba-oramovania: #526282;
+    
+    
+    --medzera-s: 1rem;
+    --medzera-m: 1.5rem;
+    --medzera-l: 2rem;
+    --medzera-xl: 3rem;
 
+    --font-nadpis: 'Metamorphous', sans-serif;
+    --font-body: 'Taviraj', sans-serif;
 }
 
-@media (min-width: 1024px) {
+h1, h2, h3, h4{
+    color: var(--Farba-nadpisov);
+    font-family: var(--font-nadpis);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    background-image: url("../images/pozadie.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+p{
+    color: whitesmoke;
+    font-family: var(--font-body);
+}
+
+nav{
+    display: none;
+    color: var(--Farba-nadpisov);
+    font-family: var(--font-nadpis);
+}
+
+img{
+    width: 300px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
     .nav__zoznam{
         display: flex;
         flex-direction: row;
