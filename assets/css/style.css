@@ -34,6 +34,10 @@ body {
     background-repeat: repeat;
 }
 
+.header-obsah{
+    background-color: var(--Farba-hlavicky);
+}
+
 p{
     color: whitesmoke;
     font-family: var(--font-body);
@@ -50,8 +54,34 @@ img{
     height: auto;
 }
 
+div{
+    background-color: var(--Farba-boxov);
+    outline-color: var(--Farba-oramovania);
+    gap: var(--medzera-l);
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--medzera-m);
+    text-align: center;
+}
+
+.logo{
+    height: 50px;
+    width: auto;
+}
+
+footer{
+    background-color: var(--Farba-paty);
+    display: grid;
+    grid-template-columns: 3fr;
+    gap: var(--medzera-m);
+}
+
 @media (min-width: 768px) {
     .nav__zoznam{
+        display: show;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
