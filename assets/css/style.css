@@ -72,6 +72,11 @@ div{
     width: auto;
 }
 
+.zrucnosti{
+    color: whitesmoke;
+    font-family: var(--font-body);
+}
+
 footer{
     background-color: var(--Farba-paty);
     display: grid;
