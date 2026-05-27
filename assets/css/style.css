@@ -4,7 +4,7 @@
 :root{
     --Farba-hlavicky: #43357A;
     --Farba-paty: #4F4F6B;
-    --Farba-boxov: #BFABCF;
+    --Farba-boxov: #BFABCFA6;
     --Farba-tlacidiel: #DFE0F7;
     --Farba-nadpisov: #FBFF00;
     --Farba-oramovania: #526282;
@@ -54,6 +54,15 @@ img{
     height: auto;
 }
 
+.ja-img{
+    width: auto;
+    height: 300px;
+}
+
+.zarovnat-doprava{
+    text-align: right;
+}
+
 div{
     background-color: var(--Farba-boxov);
     outline-color: var(--Farba-oramovania);
@@ -61,10 +70,14 @@ div{
 }
 
 .portfolio{
+    background-color: none;
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--medzera-m);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo{
@@ -72,9 +85,27 @@ div{
     width: auto;
 }
 
+.o-mne{
+    background-color: var(--Farba-boxov);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--medzera-m);
+    text-align: left;
+}
+
 .zrucnosti{
     color: whitesmoke;
     font-family: var(--font-body);
+}
+
+.tlacidlo{
+    background-color: var(--Farba-tlacidiel);
+    color: black;
+    font-family: var(--font-nadpis);
+    padding: var(--medzera-s) var(--medzera-m);
+    border: none;
+    cursor: pointer;
+    text-align: right;
 }
 
 footer{
@@ -90,5 +121,19 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .portfolio{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--medzera-l);
+    
+        justify-items: center;
+    }
+
+    .o-mne{
+        grid-template-columns: 1fr 1fr;
     }
 }
