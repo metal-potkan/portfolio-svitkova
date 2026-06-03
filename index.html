@@ -9,99 +9,134 @@
 </head>
 <body>
     
-    <header>
+    <header id="top">
         <div class="header-obsah">
 
             <img src="assets/images/logo.png" alt="logo" class="logo">
 
-            <nav class="nav">
+            <button class="hamburger" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="mobile-menu">
                 <ul class="nav__zoznam">
-                    <li class="nav__polozka"><a class="nav__odkaz">Domov</a></li>
-                    <li class="nav__polozka"><a class="nav__odkaz">O mne</a></li>
-                    <li class="nav__polozka"><a class="nav__odkaz">Portfólio</a></li>
-                    <li class="nav__polozka"><a class="nav__odkaz">Kontakt</a></li>
+                    <li class="nav__polozka"><a class="nav__odkaz" href="index.html">Domov</a></li>
+                    <li class="nav__polozka"><a class="nav__odkaz" href="index1.html">O mne</a></li>
+                    <li class="nav__polozka"><a class="nav__odkaz" href="index2.html">Portfólio</a></li>
+                    <li class="nav__polozka"><a class="nav__odkaz" href="index3.html">Kontakt</a></li>
                 </ul>
             </nav>
 
         </div>
     </header>
 
-    <section class="domov">
+    <section class="domov" id="domov">
 
-        <div class="meno+slogan">
+    <div class="hero-box">
 
-            <h1>Ahoj som Sabína Svitková</h1>
-            <h2>- mením nápady na vizuálne príbehy</h2>
+        <h1>Ahoj, som Sabína Svitková</h1>
+
+        <h2>
+            mením nápady na vizuálne príbehy
+        </h2>
+
+    </div>
+
+    <div class="intro-box">
+
+        <h3>
+            Tvorím moderné a vizuálne atraktívne digitálne projekty.
+        </h3>
+
+    </div>
+
+    <div class="home-about">
+
+        <h3>O mne</h3>
+
+        <p>
+            Som študentka grafiky digitálnych médií so záujmom
+            o moderný digitálny dizajn.
+        </p>
+
+        <p>
+            Inšpirujem sa estetikou 2000s horrorových hier
+            a temnejšou atmosférou.
+        </p>
+
+        <a href="index1.html" class="tlacidlo">
+            Viac o mne
+        </a>
+
+    </div>
+
+    <div class="home-portfolio">
+
+        <h3>Najlepšie projekty</h3>
+
+        <div class="mini-projekty">
+
+            <article class="mini-karta">
+
+                <img src="assets/images/reinterpretacia_svitkova (1).png" alt="projekt">
+
+                <h4>Witch’s fantasy world</h4>
+
+                <p>
+                    Temná fantasy estetika.
+                </p>
+
+            </article>
+
+            <article class="mini-karta">
+
+                <img src="assets/images/THE OLD ROAD.png" alt="projekt">
+
+                <h4>The Old Road</h4>
+
+                <p>
+                    Horrorová 2000s estetika.
+                </p>
+
+            </article>
+
+            <article class="mini-karta">
+
+                <img src="assets/images/Obrázok.png" alt="projekt">
+
+                <h4>Draculaura’s Birthday Party</h4>
+
+                <p>
+                    Gotická ilustrácia.
+                </p>
+
+            </article>
 
         </div>
 
-        <div class="podnadpis">
+        <a href="index2.html" class="tlacidlo">
+            Všetky projekty
+        </a>
 
-            <h3>Tvorím moderné a vizuálne atraktívne digitálne projekty.</h3>
-            <img src="" alt="">
+    </div>
 
+    <div class="kontakt-box">
 
-        </div>
+        <h3>Kontakt</h3>
 
-        <div class="o-mne">
+        <p>
+            Máte projekt? Ozvite sa!
+        </p>
 
-            <h3>O mne</h3>
+        <a href="index3.html" class="tlacidlo">
+            Kontaktovať
+        </a>
 
-            <p>
-                Som študentka grafiky digitálnych médií so záujmom o moderný digitálny dizajn. 
-                Vo svojej tvorbe sa inšpirujem estetikou 2000s horrorových hier a temnejšou vizuálnou atmosférou. 
-                Mojím cieľom je vytvárať dizajn, ktorý je nielen pekný, ale aj zapamätateľný
-            </p>
+    </div>
 
-            <a href="index1.html" class="tlacidlo">Viac o mne</a>
-
-        </div>
-
-        <div class="portfolio">
-
-            <h3>Najlepšie projekty</h3>
-
-                
-                    
-
-                    <img src="assets/images/reinterpretacia_svitkova (1).png" alt="kresleny obrazok">
-                    <h4>Witch’s fantasy world</h4>
-                    <p>Grafický projekt s dôrazom na atmosféru a temnú estetiku.</p>
-                    <p>Technológie: Adobe Illustrator</p>
-                
-
-                
-
-                    <img src="assets/images/THE OLD ROAD.png" alt="the old road">
-                    <h4>The Old Road</h4>
-                    <p>Instagramový príspevok inšpirovaný estetikou 2000s horrorových hier.</p>
-                    <p>Technológie: Canva</p>
-
-                
-                
-
-                    <img src="assets/images/Obrázok.png" alt="draculaura">
-                    <h4>Draculaura’s Birthday Party</h4>
-                    <p>Ručne kreslená ilustrácia inšpirovaná gotickou estetikou.</p>
-                    <p>Technológie: Ručná ilustrácia, digitalizácia</p>
-
-                
-
-                <a href="index2.html" class="tlacidlo">Všetky projekty</a>
-
-        </div>
-
-        <div class="kontakt">
-
-            <h3>Kontakt</h3>
-            <p>Máte projekt? Ozvite sa!</p>
-
-            <a href="index3.html" class="tlacidlo">Kontaktovať</a>
-
-        </div>
-
-
-    </section>
+</section>
 
     <footer>
         <a href="index.html" class="tlacidlo">šipka hore</a>
@@ -111,5 +146,6 @@
         <img src="assets/images/ikona facebook.png" alt="logo" class="logo">
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

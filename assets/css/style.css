@@ -43,31 +43,108 @@ p{
     font-family: var(--font-body);
 }
 
+.header-obsah{
+    background-color: var(--Farba-hlavicky);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--medzera-m);
+    padding: var(--medzera-s) var(--medzera-m);
+    position: relative;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.hamburger span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--Farba-nadpisov);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 nav{
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: var(--Farba-hlavicky);
+    padding: var(--medzera-m);
+    z-index: 10;
     color: var(--Farba-nadpisov);
     font-family: var(--font-nadpis);
 }
 
+nav.nav--open{
+    display: block;
+}
+
+.nav__zoznam{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--medzera-s);
+}
+
+.nav__polozka{
+    text-align: center;
+}
+
+.nav__odkaz{
+    color: var(--Farba-nadpisov);
+    text-decoration: none;
+    font-family: var(--font-nadpis);
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.nav__odkaz:hover{
+    opacity: 0.8;
+}
+
+
+/*
 img{
     width: 300px;
     height: auto;
 }
+*/
+
 
 .ja-img{
     width: auto;
     height: 300px;
+    float: right;
+    margin-left: var(--medzera-m);
+    margin-bottom: var(--medzera-m);
+}
+
+.bio-content{
+    overflow: auto;
 }
 
 .zarovnat-doprava{
     text-align: right;
 }
 
-div{
-    background-color: var(--Farba-boxov);
-    outline-color: var(--Farba-oramovania);
-    gap: var(--medzera-l);
-}
+
 
 .portfolio{
     background-color: none;
@@ -80,13 +157,16 @@ div{
     align-items: center;
 }
 
+
+
 .logo{
     height: 50px;
     width: auto;
 }
 
+
+
 .o-mne{
-    background-color: var(--Farba-boxov);
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--medzera-m);
@@ -103,16 +183,91 @@ div{
     color: black;
     font-family: var(--font-nadpis);
     padding: var(--medzera-s) var(--medzera-m);
-    border: none;
     cursor: pointer;
     text-align: right;
+    Border-radius: 15px;
+}
+
+label{
+    color: whitesmoke;
+    font-family: var(--font-body);
+}
+
+.kontakt-zoznam{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--medzera-s);
+    color: whitesmoke;
+}
+
+button.tlacidlo:hover{
+    background-color: var(--Farba-tlacidiel);
+    opacity: 0.8;
 }
 
 footer{
     background-color: var(--Farba-paty);
-    display: grid;
-    grid-template-columns: 3fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: var(--medzera-m);
+    padding: var(--medzera-m);
+}
+
+.back-to-top{
+    background-color: transparent;
+    color: var(--Farba-tlacidiel);
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.back-to-top:hover{
+    opacity: 0.7;
+}
+
+.footer-info{
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.footer-info p{
+    margin: 0;
+    font-size: 0.9rem;
+    color: whitesmoke;
+}
+
+.footer-socials{
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--medzera-m);
+    flex-shrink: 0;
+}
+
+.social-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-img{
+    width: 30px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.social-img:hover{
+    opacity: 0.7;
 }
 
 @media (min-width: 768px) {
@@ -136,4 +291,383 @@ footer{
     .o-mne{
         grid-template-columns: 1fr 1fr;
     }
+}
+
+
+/*chatgpt napisal:*/
+
+
+.o-mne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.nadpis-box{
+    background-color: var(--Farba-boxov);
+    width: 90%;
+    text-align: center;
+    padding: 0.5rem;
+
+    border: 2px solid var(--Farba-oramovania);
+}
+
+.bio-box,
+.text-box,
+.zrucnosti-box{
+    background-color: var(--Farba-boxov);
+
+    width: 90%;
+
+    padding: 1rem;
+
+    border: 2px solid var(--Farba-oramovania);
+}
+
+.bio-hlavne{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.ja-img{
+    width: 110px;
+    height: auto;
+
+    border: 2px solid var(--Farba-oramovania);
+}
+
+.bio-text{
+    flex: 1;
+}
+
+.bio-text p,
+.text-box p{
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.zrucnosti{
+    margin: 0;
+    padding-left: 1.2rem;
+
+    color: white;
+    font-family: var(--font-body);
+}
+
+.zrucnosti li{
+    margin-bottom: 0.3rem;
+}
+
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.portfolio-nadpis{
+    width: 90%;
+
+    background-color: var(--Farba-boxov);
+
+    border: 2px solid var(--Farba-oramovania);
+
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.moje-prace{
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+}
+
+.projekt-karta{
+    background-color: var(--Farba-boxov);
+
+    border: 2px solid var(--Farba-oramovania);
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    align-self: start;
+}
+
+.projekt-karta img{
+    width: 100%;
+    height: auto;
+
+    border: 2px solid var(--Farba-oramovania);
+
+    margin-bottom: 0.7rem;
+
+    display: block;
+
+    border: 2px solid var(--Farba-oramovania);
+
+    margin-bottom: 0.7rem;
+}
+
+.projekt-karta h3{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.projekt-karta p{
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.tech{
+    opacity: 0.8;
+    font-size: 0.75rem;
+}
+
+.mini-btn{
+    align-self: flex-end;
+
+    background-color: var(--Farba-tlacidiel);
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 0.3rem 0.7rem;
+
+    border-radius: 10px;
+
+    margin-top: auto;
+
+    font-family: var(--font-nadpis);
+}
+
+.mini-btn:hover{
+    opacity: 0.8;
+}
+
+
+
+.kontaktovat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.kontakt-nadpis,
+.formular-box,
+.info-box,
+.social-box{
+    width: 90%;
+
+    background-color: var(--Farba-boxov);
+
+    border: 2px solid var(--Farba-oramovania);
+
+    padding: 1rem;
+}
+
+.kontakt-nadpis{
+    text-align: center;
+}
+
+.kontakt-form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.7rem;
+}
+
+.kontakt-form input,
+.kontakt-form textarea{
+    width: 100%;
+
+    background-color: #d9d9d9;
+
+    border: none;
+
+    padding: 0.7rem;
+
+    font-family: var(--font-body);
+
+    box-sizing: border-box;
+}
+
+.kontakt-form textarea{
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.odoslat-btn{
+    align-self: flex-end;
+
+    background-color: var(--Farba-tlacidiel);
+
+    border: none;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: var(--font-nadpis);
+}
+
+.odoslat-btn:hover{
+    opacity: 0.8;
+}
+
+.info-box ul{
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.social-box{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.social-left{
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+}
+
+.social-logo{
+    width: 35px;
+    height: auto;
+}
+
+.social-link{
+    color: white;
+
+    text-decoration: none;
+
+    font-family: var(--font-body);
+}
+
+
+
+.domov{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.hero-box,
+.intro-box,
+.home-about,
+.home-portfolio,
+.kontakt-box{
+    width: 90%;
+
+    background-color: var(--Farba-boxov);
+
+    border: 2px solid var(--Farba-oramovania);
+
+    padding: 1rem;
+}
+
+.hero-box{
+    text-align: center;
+}
+
+.hero-box h1{
+    font-size: 1.8rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.hero-box h2{
+    color: white;
+
+    font-size: 1rem;
+
+    font-family: var(--font-body);
+
+    font-weight: normal;
+}
+
+.intro-box{
+    text-align: center;
+}
+
+.home-about p,
+.kontakt-box p,
+.mini-karta p{
+    line-height: 1.5;
+}
+
+.home-about,
+.home-portfolio,
+.kontakt-box{
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.mini-projekty{
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.mini-karta{
+    background-color: rgba(0,0,0,0.15);
+
+    border: 2px solid var(--Farba-oramovania);
+
+    padding: 0.8rem;
+}
+
+.mini-karta img{
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 0.7rem;
+}
+
+.mini-karta h4{
+    margin-bottom: 0.5rem;
+}
+
+.tlacidlo{
+    align-self: flex-end;
+
+    text-decoration: none;
+
+    display: inline-block;
 }
