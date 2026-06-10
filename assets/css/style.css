@@ -174,6 +174,26 @@ img{
     text-align: left;
 }
 
+.o-mne{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--medzera-m);
+    text-align: left;
+    margin-bottom: var(--medzera-m);
+}
+
+.bio-box{
+    margin-bottom: var(--medzera-m);
+}
+
+.text-box{
+    margin-bottom: var(--medzera-m);
+}
+
+.zrucnosti-box{
+    margin-top: var(--medzera-m);
+}
+
 .zrucnosti{
     color: var(--Farba-pisma);
     font-family: var(--font-body);
@@ -281,21 +301,7 @@ footer{
 }
 
 
-/*
-@media (min-width: 1024px) {
-    .portfolio{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--medzera-l);
-    
-        justify-items: center;
-    }
-}
-*/
 
-
-
-/*chatgpt napisal:*/
 
 
 .o-mne{
@@ -373,7 +379,7 @@ footer{
     gap: 1rem;
 }
 
-.portfolio-nadpis{
+.portfolio .nadpis{
     width: 90%;
 
     background-color: var(--Farba-boxov);
@@ -413,13 +419,9 @@ footer{
     width: 100%;
     height: auto;
 
-    border: 2px solid var(--Farba-oramovania);
-
     margin-bottom: 0.7rem;
 
     display: block;
-
-    border: 2px solid var(--Farba-oramovania);
 
     margin-bottom: 0.7rem;
 }
@@ -685,6 +687,15 @@ footer{
     text-align: center;
 }
 
+.intro-img{
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+
 
 @media (min-width: 768px){
 
@@ -780,7 +791,9 @@ footer{
 
 
     .home-about{
+        grid-column: 1 /3;
         height: 100%;
+        
     }
 
     .home-portfolio{
@@ -807,17 +820,30 @@ footer{
 
 
 @media (min-width: 768px){
-
-    .domov{
-        width: 1200px;
-
-        margin: 0 auto;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 1.5rem;
+    .domov h1{
+        font-size: 3rem;
+    }
+    
+    .domov p{
+        font-size: 1.3rem;
+    }
+    
+    .domov h3{
+        font-size: 2.5rem;
+    }
+    
+    .domov p{
+        font-size: 1.2rem;
+    }
+    
+    .domov h3{
+        font-size: 1.7rem;
+    
+        margin-top: 0.5rem;
+    }
+    
+    .domov p{
+        line-height: 1.6;
     }
 
     .hero-box,
@@ -826,6 +852,7 @@ footer{
     .home-portfolio,
     .kontakt-box{
         width: 100%;
+        
     }
 
     .intro-box{
@@ -836,6 +863,10 @@ footer{
         align-items: center;
 
         gap: 2rem;
+
+        
+        grid-column: 1 / 3;
+        
     }
 
     .intro-text{
@@ -851,7 +882,7 @@ footer{
     }
 
     .intro-img{
-        width: 220px;
+        width: 310px;
 
         height: auto;
 
@@ -860,9 +891,27 @@ footer{
 
 
     #tlacidlo-kontakt{
-        text-align: right;
+        gap: -1rem;
+        align-items: right;
     }
 
+
+    .domov{
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem; 
+        align-items: start;
+
+}
+
+    .nadpis{
+        width: 100%;
+
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+    }
 }
 
 
@@ -965,8 +1014,6 @@ footer{
         transform: scale(1.1);
     }
 
-    
-
 }
 
 
@@ -1021,9 +1068,9 @@ footer{
     }
 
     main{
-        width: 1300px;
-
+        max-width: 1300px;
         margin: 0 auto;
+        width: 100%;
     }
 
 }
@@ -1034,24 +1081,47 @@ footer{
 
 @media (min-width: 768px){
 
-    .o-mne{
-        max-width: 1200px;
-
-        margin: 0 auto;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 1.5rem;
-    }
-
-    .o-mne-grid{
-
-        gap: 1.5rem;
-
-        align-items: start;
-    }
+        .o-mne{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+    
+        .o-mne-grid{
+            display: grid;
+            grid-template-columns: 2fr 1fr; 
+            gap: 3rem;
+            align-items: start;
+        }
+    
+        .left-column{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            min-width: 0;
+        }
+    
+        .right-column{
+            position: sticky; 
+            top: 2rem;
+            min-width: 0;
+        }
+    
+        .bio-hlavne{
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+    
+        .ja-img{
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+        }
+    
+        .text-box{
+            line-height: 1.6;
+        }
 
     .bio-box,
     .text-box,
@@ -1060,22 +1130,6 @@ footer{
         width: 100%;
 
         box-sizing: border-box;
-    }
-
-    .bio-hlavne{
-        display: flex;
-
-        gap: 1.5rem;
-
-        align-items: flex-start;
-    }
-
-    .ja-img{
-        width: 160px;
-
-        height: auto;
-
-        object-fit: cover;
     }
 
     .bio-text{
@@ -1087,9 +1141,29 @@ footer{
         top: 2rem;
     }
 
+    .o-mne h1{
+        font-size: 3rem;
+    }
+    
+    .o-mne p{
+        font-size: 1.3rem;
+    }
+    
+    .o-mne h3{
+        font-size: 2.5rem;
+    }
+
+    .o-mne li{
+        font-size: 1.3rem;
+    }
+    
+    
+    
+    .o-mne p{
+        line-height: 1.6;
+    }
+
 }
-
-
 
 
 
@@ -1098,92 +1172,168 @@ footer{
 
     .portfolio{
         max-width: 1200px;
-
         margin: 0 auto;
-
-        display: block;
-
-        gap: 1.5rem;
+        padding-bottom: var(--medzera-xl);
     }
 
-    .portfolio-nadpis{
+    .nadpis{
         width: 100%;
-
-        box-sizing: border-box;
+        margin-bottom: 2rem;
     }
 
     .moje-prace{
-        width: 100%;
-    
         display: grid;
-    
-        grid-template-columns: repeat(3, minmax(280px, 1fr));
-    
+
+        grid-template-columns: repeat(3, 1fr);
+
         gap: 2rem;
-    
-        align-items: start;
+
+        align-items: stretch;
     }
-}
-
-
-
-
-@media (min-width: 768px){
 
     .projekt-karta{
-        
-    
+        background-color: var(--Farba-boxov);
+
         padding: 1rem;
-    
+
         display: flex;
-    
+
         flex-direction: column;
-    
-        gap: 1rem;
-    
-        box-sizing: border-box;
-    
-        height: auto;
-    
-        width: 100%;
-    }
-}
 
+        justify-content: space-between;
 
-
-@media (min-width: 768px){
-
-    .portfolio .nadpis{
-        width: 100%;
-    
-        margin-bottom: 2rem;
+        min-height: 100%;
     }
 
     .projekt-karta img{
         width: 100%;
-    
-        height: auto;
-    
+
+        height: 250px;
+
         object-fit: contain;
-    
+
         display: block;
     }
 
     .projekt-karta .mini-btn{
         margin-top: auto;
-    
+
         align-self: flex-end;
     }
 
-    .projekt-karta .tlacidlo{
-        margin-top: auto;
+    .portfolio .nadpis{
+        background-color: var(--Farba-boxov);
     
-        align-self: flex-end;
+        border: 2px solid var(--Farba-oramovania);
+    
+        padding: 1.5rem;
+    
+        margin-bottom: 3rem;
+    
+        text-align: center;
     }
+
+    .projekt-karta{
+        transition: 0.3s ease;
+    }
+    
+    .projekt-karta:hover{
+        transform: translateY(-5px);
+    }
+
+    .moje-prace{
+        display: grid;
+    
+        grid-template-columns: repeat(3, 1fr);
+    
+        gap: 3rem;
+    }
+
+    .portfolio h1{
+        font-size: 3rem;
+    }
+    
+    .portfolio p{
+        font-size: 1.3rem;
+    }
+    
+    .projekt-karta h3{
+        font-size: 2.5rem;
+    }
+    
+    .projekt-karta p{
+        font-size: 1.2rem;
+    }
+    
+    .tech{
+        font-size: 1rem;
+    }
+
+    .projekt-karta h3{
+        font-size: 1.7rem;
+    
+        margin-top: 0.5rem;
+    }
+    
+    .projekt-karta p{
+        line-height: 1.6;
+    }
+
+
+
 }
 
 
+@media (min-width: 768px){
 
+    .kontaktovat{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .kontaktovat h1{
+        font-size: 3rem;
+    }
+    
+    .kontaktovat p{
+        font-size: 1.3rem;
+    }
+    
+    .kontaktovat h3{
+        font-size: 2.5rem;
+    }
+
+    .kontaktovat li{
+        font-size: 1.3rem;
+    }
+
+    .kontaktovat label{
+        font-size: 1.3rem;
+    }
+    
+    .kontaktovat h3{
+        font-size: 1.7rem;
+    
+        margin-top: 0.5rem;
+    }
+    
+    .kontaktovat p{
+        line-height: 1.6;
+    }
+
+    .social-logo{
+        height: 55px;
+        width: auto;
+    }
+
+    .social-box .info-box .formular-box{
+
+    gap: var(--medzera-xl);
+    }
+}
+
+/*
 @media (min-width: 768px){
 
     .portfolio{
@@ -1199,6 +1349,8 @@ footer{
     }
 
 }
+*/
+
 
 
 
