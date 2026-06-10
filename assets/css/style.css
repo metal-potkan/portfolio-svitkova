@@ -648,6 +648,18 @@ footer{
     padding: 0.8rem;
 }
 
+#mini-karta1{
+    text-align: left;
+}
+
+#mini-karta2{
+    text-align: center;
+}
+
+#mini-karta3{
+    text-align: right;
+}
+
 .mini-karta img{
     width: 100%;
     height: auto;
@@ -669,6 +681,9 @@ footer{
     width: fit-content;
 }
 
+#tlacidlo-projekty{
+    text-align: center;
+}
 
 
 @media (min-width: 1024px){
